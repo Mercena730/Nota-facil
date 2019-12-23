@@ -1,0 +1,9 @@
+C:\git\Infor ramos\Nota facil\Nota facil\bin\Debug\Nota facil.exe.config
+C:\git\Infor ramos\Nota facil\Nota facil\bin\Debug\Nota facil.exe
+C:\git\Infor ramos\Nota facil\Nota facil\bin\Debug\Nota facil.pdb
+C:\git\Infor ramos\Nota facil\Nota facil\obj\Debug\Nota facil.csprojAssemblyReference.cache
+C:\git\Infor ramos\Nota facil\Nota facil\obj\Debug\Nota_facil.Frmin.resources
+C:\git\Infor ramos\Nota facil\Nota facil\obj\Debug\Nota_facil.Properties.Resources.resources
+C:\git\Infor ramos\Nota facil\Nota facil\obj\Debug\Nota facil.csproj.GenerateResource.cache
+C:\git\Infor ramos\Nota facil\Nota facil\obj\Debug\Nota facil.exe
+C:\git\Infor ramos\Nota facil\Nota facil\obj\Debug\Nota facil.pdb
