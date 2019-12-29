@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nota facil", "Nota facil.csproj", "{DB73085A-9828-4EBD-AAE6-B22072E3EDA0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nota facil", "Nota facil.csproj", "{7610018C-FB48-4B69-912D-2C1177582AC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DB73085A-9828-4EBD-AAE6-B22072E3EDA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DB73085A-9828-4EBD-AAE6-B22072E3EDA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DB73085A-9828-4EBD-AAE6-B22072E3EDA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DB73085A-9828-4EBD-AAE6-B22072E3EDA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7610018C-FB48-4B69-912D-2C1177582AC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7610018C-FB48-4B69-912D-2C1177582AC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7610018C-FB48-4B69-912D-2C1177582AC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7610018C-FB48-4B69-912D-2C1177582AC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {8EBF65A4-E7F7-4173-BDB0-CAE285C0B423}
+		SolutionGuid = {72844BDC-71D7-4A69-A067-3604B46C4072}
 	EndGlobalSection
 EndGlobal

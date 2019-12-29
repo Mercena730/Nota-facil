@@ -16,7 +16,7 @@ namespace Nota_facil
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frmin());
+            Application.Run(new Frminicio());
         }
     }
 }
