@@ -82,6 +82,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmCadastrodecliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadastrodecliente.Designer.cs">
+      <DependentUpon>FrmCadastrodecliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmcadastrodeestoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmcadastrodeestoque.Designer.cs">
+      <DependentUpon>Frmcadastrodeestoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmcaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmcaixa.Designer.cs">
+      <DependentUpon>Frmcaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frmcliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmcliente.Designer.cs">
+      <DependentUpon>Frmcliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEstoque.Designer.cs">
+      <DependentUpon>FrmEstoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frminicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +132,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmCadastrodecliente.resx">
+      <DependentUpon>FrmCadastrodecliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmcadastrodeestoque.resx">
+      <DependentUpon>Frmcadastrodeestoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmcaixa.resx">
+      <DependentUpon>Frmcaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmcliente.resx">
+      <DependentUpon>Frmcliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEstoque.resx">
+      <DependentUpon>FrmEstoque.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frminicio.resx">
       <DependentUpon>Frminicio.cs</DependentUpon>
     </EmbeddedResource>

@@ -31,10 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frmmenu));
             this.pgcliente = new System.Windows.Forms.PictureBox();
             this.pgcadastro = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pgcaixa = new System.Windows.Forms.PictureBox();
+            this.pgestoque = new System.Windows.Forms.PictureBox();
+            this.pgcadestoque = new System.Windows.Forms.PictureBox();
+            this.pcsair = new System.Windows.Forms.PictureBox();
             this.lblsair = new System.Windows.Forms.Label();
             this.lblcliente = new System.Windows.Forms.Label();
             this.lblvendas = new System.Windows.Forms.Label();
@@ -43,10 +43,10 @@
             this.lblestoque = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pgcliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pgcadastro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pgcaixa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pgestoque)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pgcadestoque)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcsair)).BeginInit();
             this.SuspendLayout();
             // 
             // pgcliente
@@ -60,6 +60,7 @@
             this.pgcliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pgcliente.TabIndex = 0;
             this.pgcliente.TabStop = false;
+            this.pgcliente.Click += new System.EventHandler(this.pgcliente_Click);
             // 
             // pgcadastro
             // 
@@ -72,52 +73,56 @@
             this.pgcadastro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pgcadastro.TabIndex = 1;
             this.pgcadastro.TabStop = false;
+            this.pgcadastro.Click += new System.EventHandler(this.pgcadastro_Click);
             // 
-            // pictureBox3
+            // pgcaixa
             // 
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(526, 149);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(199, 229);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.WaitOnLoad = true;
+            this.pgcaixa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pgcaixa.Image = ((System.Drawing.Image)(resources.GetObject("pgcaixa.Image")));
+            this.pgcaixa.Location = new System.Drawing.Point(526, 149);
+            this.pgcaixa.Name = "pgcaixa";
+            this.pgcaixa.Size = new System.Drawing.Size(199, 229);
+            this.pgcaixa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pgcaixa.TabIndex = 2;
+            this.pgcaixa.TabStop = false;
+            this.pgcaixa.WaitOnLoad = true;
+            this.pgcaixa.Click += new System.EventHandler(this.pgcaixa_Click);
             // 
-            // pictureBox4
+            // pgestoque
             // 
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(786, 149);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(199, 229);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
+            this.pgestoque.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pgestoque.Image = ((System.Drawing.Image)(resources.GetObject("pgestoque.Image")));
+            this.pgestoque.Location = new System.Drawing.Point(786, 149);
+            this.pgestoque.Name = "pgestoque";
+            this.pgestoque.Size = new System.Drawing.Size(199, 229);
+            this.pgestoque.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pgestoque.TabIndex = 3;
+            this.pgestoque.TabStop = false;
+            this.pgestoque.Click += new System.EventHandler(this.pgestoque_Click);
             // 
-            // pictureBox5
+            // pgcadestoque
             // 
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(1077, 149);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(199, 229);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
+            this.pgcadestoque.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pgcadestoque.Image = ((System.Drawing.Image)(resources.GetObject("pgcadestoque.Image")));
+            this.pgcadestoque.Location = new System.Drawing.Point(1077, 149);
+            this.pgcadestoque.Name = "pgcadestoque";
+            this.pgcadestoque.Size = new System.Drawing.Size(199, 229);
+            this.pgcadestoque.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pgcadestoque.TabIndex = 4;
+            this.pgcadestoque.TabStop = false;
+            this.pgcadestoque.Click += new System.EventHandler(this.pgcadestoque_Click);
             // 
-            // pictureBox6
+            // pcsair
             // 
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(1287, 487);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(181, 197);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.pcsair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pcsair.Image = ((System.Drawing.Image)(resources.GetObject("pcsair.Image")));
+            this.pcsair.Location = new System.Drawing.Point(1287, 487);
+            this.pcsair.Name = "pcsair";
+            this.pcsair.Size = new System.Drawing.Size(181, 197);
+            this.pcsair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcsair.TabIndex = 5;
+            this.pcsair.TabStop = false;
+            this.pcsair.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // lblsair
             // 
@@ -137,7 +142,7 @@
             this.lblcliente.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcliente.Location = new System.Drawing.Point(74, 394);
             this.lblcliente.Name = "lblcliente";
-            this.lblcliente.Size = new System.Drawing.Size(113, 39);
+            this.lblcliente.Size = new System.Drawing.Size(110, 37);
             this.lblcliente.TabIndex = 7;
             this.lblcliente.Text = "Cliente";
             // 
@@ -148,7 +153,7 @@
             this.lblvendas.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblvendas.Location = new System.Drawing.Point(571, 403);
             this.lblvendas.Name = "lblvendas";
-            this.lblvendas.Size = new System.Drawing.Size(96, 39);
+            this.lblvendas.Size = new System.Drawing.Size(94, 37);
             this.lblvendas.TabIndex = 8;
             this.lblvendas.Text = "Caixa";
             // 
@@ -159,7 +164,7 @@
             this.lblcad.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcad.Location = new System.Drawing.Point(236, 403);
             this.lblcad.Name = "lblcad";
-            this.lblcad.Size = new System.Drawing.Size(260, 39);
+            this.lblcad.Size = new System.Drawing.Size(252, 37);
             this.lblcad.TabIndex = 9;
             this.lblcad.Text = " Cadastrar Cliente";
             // 
@@ -170,7 +175,7 @@
             this.lblcadestoque.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcadestoque.Location = new System.Drawing.Point(1045, 394);
             this.lblcadestoque.Name = "lblcadestoque";
-            this.lblcadestoque.Size = new System.Drawing.Size(290, 39);
+            this.lblcadestoque.Size = new System.Drawing.Size(277, 37);
             this.lblcadestoque.TabIndex = 10;
             this.lblcadestoque.Text = "Cadastro de estoque";
             // 
@@ -181,7 +186,7 @@
             this.lblestoque.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblestoque.Location = new System.Drawing.Point(797, 403);
             this.lblestoque.Name = "lblestoque";
-            this.lblestoque.Size = new System.Drawing.Size(126, 39);
+            this.lblestoque.Size = new System.Drawing.Size(121, 37);
             this.lblestoque.TabIndex = 11;
             this.lblestoque.Text = "Estoque";
             // 
@@ -198,10 +203,10 @@
             this.Controls.Add(this.lblvendas);
             this.Controls.Add(this.lblcliente);
             this.Controls.Add(this.lblsair);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pcsair);
+            this.Controls.Add(this.pgcadestoque);
+            this.Controls.Add(this.pgestoque);
+            this.Controls.Add(this.pgcaixa);
             this.Controls.Add(this.pgcadastro);
             this.Controls.Add(this.pgcliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -210,10 +215,10 @@
             this.Text = "Frmmenu";
             ((System.ComponentModel.ISupportInitialize)(this.pgcliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pgcadastro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pgcaixa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pgestoque)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pgcadestoque)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcsair)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,10 +228,10 @@
 
         private System.Windows.Forms.PictureBox pgcliente;
         private System.Windows.Forms.PictureBox pgcadastro;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pgcaixa;
+        private System.Windows.Forms.PictureBox pgestoque;
+        private System.Windows.Forms.PictureBox pgcadestoque;
+        private System.Windows.Forms.PictureBox pcsair;
         private System.Windows.Forms.Label lblsair;
         private System.Windows.Forms.Label lblcliente;
         private System.Windows.Forms.Label lblvendas;

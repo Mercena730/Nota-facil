@@ -114,6 +114,7 @@
             this.txtsenha.Size = new System.Drawing.Size(602, 42);
             this.txtsenha.TabIndex = 5;
             this.txtsenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtsenha.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsenha_KeyPress);
             // 
             // btnlogin
             // 

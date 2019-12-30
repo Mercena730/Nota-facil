@@ -34,7 +34,7 @@ namespace Nota_facil
             if (dt.Rows.Count == 1)
             {
 
-                MessageBox.Show("Bem vindo" + "  " + txtusuario.Text);
+                MessageBox.Show("Bem vindo" + "\n" + txtusuario.Text);
                 this.Close();
                 Frmmenu = new Thread(frmmenu);
                 Frmmenu.SetApartmentState(ApartmentState.MTA);
@@ -64,8 +64,6 @@ namespace Nota_facil
                     lbltmp.Text = "0" + minutos + ":" + segundo;
                     TMtemp.Enabled = true;
                 }
-
-
             }
         }
 
@@ -94,6 +92,52 @@ namespace Nota_facil
                 txtsenha.Enabled = true;
                 btnlogin.Enabled = true;
                 lbltmp.Visible = false;
+            }
+        }
+
+        private void txtsenha_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar==Convert.ToChar(Keys.Enter))
+            {
+                count = count + 1;
+                string query = "SELECT * FROM cadastro WHERE Usuario='" + txtusuario.Text + "' && Senha='" + txtsenha.Text + "'";
+                MySqlDataAdapter data = new MySqlDataAdapter(query, conexao);
+                DataTable dt = new DataTable();
+                data.Fill(dt);
+                if (dt.Rows.Count == 1)
+                {
+
+                    MessageBox.Show("Bem vindo" + "\n" + txtusuario.Text);
+                    this.Close();
+                    Frmmenu = new Thread(frmmenu);
+                    Frmmenu.SetApartmentState(ApartmentState.MTA);
+                    Frmmenu.Start();
+
+                }
+                else
+                {
+                    MessageBox.Show("Senha ou usuario Não exitem nos dados");
+                    if (count > 3)
+                    {
+                        txtusuario.Enabled = false;
+                        txtsenha.Enabled = false;
+                        btnlogin.Enabled = false;
+                        MessageBox.Show("Tentativas expiradas Sera desbloqueado assim que contador chegar 0;");
+                        lbltmp.Visible = true;
+                        if (tempo >= 60)
+                        {
+                            minutos = tempo / 60;
+                            segundo = tempo % 60;
+                        }
+                        else
+                        {
+                            minutos = 0;
+                            segundo = tempo;
+                        }
+                        lbltmp.Text = "0" + minutos + ":" + segundo;
+                        TMtemp.Enabled = true;
+                    }
+                }
             }
         }
     }
