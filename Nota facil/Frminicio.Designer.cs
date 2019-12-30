@@ -57,7 +57,7 @@
             // timer
             // 
             this.timer.Enabled = true;
-            this.timer.Interval = 1000;
+            this.timer.Interval = 50;
             this.timer.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Frminicio
@@ -72,6 +72,7 @@
             this.Controls.Add(this.progressBar);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frminicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);

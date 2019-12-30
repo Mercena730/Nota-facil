@@ -51,10 +51,11 @@
             // 
             // pgcliente
             // 
+            this.pgcliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pgcliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pgcliente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pgcliente.Image = ((System.Drawing.Image)(resources.GetObject("pgcliente.Image")));
-            this.pgcliente.Location = new System.Drawing.Point(27, 149);
+            this.pgcliente.Location = new System.Drawing.Point(61, 175);
             this.pgcliente.Name = "pgcliente";
             this.pgcliente.Size = new System.Drawing.Size(199, 229);
             this.pgcliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -64,10 +65,11 @@
             // 
             // pgcadastro
             // 
+            this.pgcadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pgcadastro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pgcadastro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pgcadastro.Image = ((System.Drawing.Image)(resources.GetObject("pgcadastro.Image")));
-            this.pgcadastro.Location = new System.Drawing.Point(269, 149);
+            this.pgcadastro.Location = new System.Drawing.Point(344, 175);
             this.pgcadastro.Name = "pgcadastro";
             this.pgcadastro.Size = new System.Drawing.Size(199, 229);
             this.pgcadastro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -77,9 +79,10 @@
             // 
             // pgcaixa
             // 
+            this.pgcaixa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pgcaixa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pgcaixa.Image = ((System.Drawing.Image)(resources.GetObject("pgcaixa.Image")));
-            this.pgcaixa.Location = new System.Drawing.Point(526, 149);
+            this.pgcaixa.Location = new System.Drawing.Point(615, 175);
             this.pgcaixa.Name = "pgcaixa";
             this.pgcaixa.Size = new System.Drawing.Size(199, 229);
             this.pgcaixa.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -90,9 +93,10 @@
             // 
             // pgestoque
             // 
+            this.pgestoque.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pgestoque.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pgestoque.Image = ((System.Drawing.Image)(resources.GetObject("pgestoque.Image")));
-            this.pgestoque.Location = new System.Drawing.Point(786, 149);
+            this.pgestoque.Location = new System.Drawing.Point(902, 175);
             this.pgestoque.Name = "pgestoque";
             this.pgestoque.Size = new System.Drawing.Size(199, 229);
             this.pgestoque.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -102,9 +106,10 @@
             // 
             // pgcadestoque
             // 
+            this.pgcadestoque.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pgcadestoque.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pgcadestoque.Image = ((System.Drawing.Image)(resources.GetObject("pgcadestoque.Image")));
-            this.pgcadestoque.Location = new System.Drawing.Point(1077, 149);
+            this.pgcadestoque.Location = new System.Drawing.Point(1199, 175);
             this.pgcadestoque.Name = "pgcadestoque";
             this.pgcadestoque.Size = new System.Drawing.Size(199, 229);
             this.pgcadestoque.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -114,9 +119,10 @@
             // 
             // pcsair
             // 
+            this.pcsair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pcsair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcsair.Image = ((System.Drawing.Image)(resources.GetObject("pcsair.Image")));
-            this.pcsair.Location = new System.Drawing.Point(1287, 487);
+            this.pcsair.Location = new System.Drawing.Point(1298, 540);
             this.pcsair.Name = "pcsair";
             this.pcsair.Size = new System.Drawing.Size(181, 197);
             this.pcsair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -126,9 +132,10 @@
             // 
             // lblsair
             // 
+            this.lblsair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblsair.AutoSize = true;
             this.lblsair.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblsair.Location = new System.Drawing.Point(1301, 650);
+            this.lblsair.Location = new System.Drawing.Point(1312, 703);
             this.lblsair.Name = "lblsair";
             this.lblsair.Size = new System.Drawing.Size(62, 34);
             this.lblsair.TabIndex = 6;
@@ -137,10 +144,11 @@
             // 
             // lblcliente
             // 
+            this.lblcliente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblcliente.AutoSize = true;
             this.lblcliente.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.lblcliente.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcliente.Location = new System.Drawing.Point(74, 394);
+            this.lblcliente.Location = new System.Drawing.Point(103, 420);
             this.lblcliente.Name = "lblcliente";
             this.lblcliente.Size = new System.Drawing.Size(110, 37);
             this.lblcliente.TabIndex = 7;
@@ -148,10 +156,11 @@
             // 
             // lblvendas
             // 
+            this.lblvendas.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblvendas.AutoSize = true;
             this.lblvendas.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.lblvendas.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblvendas.Location = new System.Drawing.Point(571, 403);
+            this.lblvendas.Location = new System.Drawing.Point(666, 429);
             this.lblvendas.Name = "lblvendas";
             this.lblvendas.Size = new System.Drawing.Size(94, 37);
             this.lblvendas.TabIndex = 8;
@@ -159,10 +168,11 @@
             // 
             // lblcad
             // 
+            this.lblcad.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblcad.AutoSize = true;
             this.lblcad.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.lblcad.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcad.Location = new System.Drawing.Point(236, 403);
+            this.lblcad.Location = new System.Drawing.Point(307, 429);
             this.lblcad.Name = "lblcad";
             this.lblcad.Size = new System.Drawing.Size(252, 37);
             this.lblcad.TabIndex = 9;
@@ -170,10 +180,11 @@
             // 
             // lblcadestoque
             // 
+            this.lblcadestoque.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblcadestoque.AutoSize = true;
             this.lblcadestoque.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.lblcadestoque.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcadestoque.Location = new System.Drawing.Point(1045, 394);
+            this.lblcadestoque.Location = new System.Drawing.Point(1165, 429);
             this.lblcadestoque.Name = "lblcadestoque";
             this.lblcadestoque.Size = new System.Drawing.Size(277, 37);
             this.lblcadestoque.TabIndex = 10;
@@ -181,10 +192,11 @@
             // 
             // lblestoque
             // 
+            this.lblestoque.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblestoque.AutoSize = true;
             this.lblestoque.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.lblestoque.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblestoque.Location = new System.Drawing.Point(797, 403);
+            this.lblestoque.Location = new System.Drawing.Point(953, 429);
             this.lblestoque.Name = "lblestoque";
             this.lblestoque.Size = new System.Drawing.Size(121, 37);
             this.lblestoque.TabIndex = 11;
@@ -196,7 +208,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1480, 696);
+            this.ClientSize = new System.Drawing.Size(1491, 749);
             this.Controls.Add(this.lblestoque);
             this.Controls.Add(this.lblcadestoque);
             this.Controls.Add(this.lblcad);
@@ -210,6 +222,7 @@
             this.Controls.Add(this.pgcadastro);
             this.Controls.Add(this.pgcliente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frmmenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frmmenu";

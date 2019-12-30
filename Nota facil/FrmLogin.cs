@@ -21,7 +21,11 @@ namespace Nota_facil
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult fechar = MessageBox.Show("\n", "Você tem certeza quer sair?", MessageBoxButtons.YesNo);
+            if (fechar == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnlogin_Click(object sender, EventArgs e)
@@ -41,10 +45,14 @@ namespace Nota_facil
                 Frmmenu.Start();
 
             }
+            else if(txtusuario.Text =="" && txtsenha.Text =="")
+            {
+                MessageBox.Show("Preencha os campos vazio com dados pedidos");
+            }
             else
             {
                 MessageBox.Show("Senha ou usuario Não exitem nos dados");
-                if (count > 3)
+                if (count > 5)
                 {
                     txtusuario.Enabled = false;
                     txtsenha.Enabled = false;
@@ -64,7 +72,13 @@ namespace Nota_facil
                     lbltmp.Text = "0" + minutos + ":" + segundo;
                     TMtemp.Enabled = true;
                 }
+                if (count > 6)
+                {
+                    MessageBox.Show("Tentativas espirada");
+                    Application.Exit();
+                }
             }
+            
         }
 
         private void frmmenu()

@@ -25,7 +25,12 @@ namespace Nota_facil
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult fechar = MessageBox.Show("\n", "Você tem certeza quer sair?", MessageBoxButtons.YesNo);
+            if (fechar == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            
         }
 
         private void pgcliente_Click(object sender, EventArgs e)
@@ -36,12 +41,11 @@ namespace Nota_facil
             frmcliente.Start();
             
         }
-
         private void pgcadastro_Click(object sender, EventArgs e)
         {
             this.Close();
             frmcadastrodecliente = new Thread(Frmcadastrodecliente);
-            frmcadastrodecliente.SetApartmentState(ApartmentState.MTA);
+            frmcadastrodecliente.SetApartmentState(ApartmentState.STA);
             frmcadastrodecliente.Start();
         }
         private void pgcaixa_Click(object sender, EventArgs e)
@@ -60,12 +64,11 @@ namespace Nota_facil
             frmestoque.Start();
 
         }
-
         private void pgcadestoque_Click(object sender, EventArgs e)
         {
             this.Close();
             frmcadastrodeestoque = new Thread(Frmcadastrodeestoque);
-            frmcadastrodeestoque.SetApartmentState(ApartmentState.MTA);
+            frmcadastrodeestoque.SetApartmentState(ApartmentState.STA);
             frmcadastrodeestoque.Start();
         }
         private void Frmcliente()

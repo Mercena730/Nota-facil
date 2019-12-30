@@ -30,5 +30,13 @@ namespace Nota_facil
         {
             Application.Run(new Frmmenu());
         }
+
+        private void btnesqimg_Click(object sender, EventArgs e)
+        {
+            if (ofdl.ShowDialog() == DialogResult.OK)
+            {
+                pccliente.ImageLocation = ofdl.FileName;
+            }
+        }
     }
 }
