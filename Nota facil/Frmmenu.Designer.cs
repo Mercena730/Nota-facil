@@ -225,7 +225,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frmmenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frmmenu";
+            this.Text = "Menu";
             ((System.ComponentModel.ISupportInitialize)(this.pgcliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pgcadastro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pgcaixa)).EndInit();

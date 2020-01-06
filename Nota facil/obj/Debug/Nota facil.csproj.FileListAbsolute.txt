@@ -30,3 +30,8 @@ C:\git\Infor ramos\Nota facil\Nota facil\obj\Debug\Nota_facil.Frmcadastrodeestoq
 C:\git\Infor ramos\Nota facil\Nota facil\obj\Debug\Nota_facil.Frmcaixa.resources
 C:\git\Infor ramos\Nota facil\Nota facil\obj\Debug\Nota_facil.Frmcliente.resources
 C:\git\Infor ramos\Nota facil\Nota facil\obj\Debug\Nota_facil.FrmEstoque.resources
+C:\git\Infor ramos\Nota facil\Nota facil\bin\Debug\Interop.WMPLib.dll
+C:\git\Infor ramos\Nota facil\Nota facil\bin\Debug\AxInterop.WMPLib.dll
+C:\git\Infor ramos\Nota facil\Nota facil\obj\Debug\Interop.WMPLib.dll
+C:\git\Infor ramos\Nota facil\Nota facil\obj\Debug\AxInterop.WMPLib.dll
+C:\git\Infor ramos\Nota facil\Nota facil\obj\Debug\Nota facil.csproj.ResolveComReference.cache

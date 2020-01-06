@@ -51,7 +51,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frmcadastrodeestoque";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frmcadastrodeestoque";
+            this.Text = "cadastro de estoque";
             this.ResumeLayout(false);
 
         }

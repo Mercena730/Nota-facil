@@ -51,7 +51,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmEstoque";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmEstoque";
+            this.Text = "Estoque";
             this.ResumeLayout(false);
 
         }
