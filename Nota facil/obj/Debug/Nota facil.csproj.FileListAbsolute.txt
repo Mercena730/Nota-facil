@@ -35,3 +35,4 @@ C:\git\Infor ramos\Nota facil\Nota facil\bin\Debug\AxInterop.WMPLib.dll
 C:\git\Infor ramos\Nota facil\Nota facil\obj\Debug\Interop.WMPLib.dll
 C:\git\Infor ramos\Nota facil\Nota facil\obj\Debug\AxInterop.WMPLib.dll
 C:\git\Infor ramos\Nota facil\Nota facil\obj\Debug\Nota facil.csproj.ResolveComReference.cache
+C:\git\Infor ramos\Nota facil\Nota facil\obj\Debug\Nota_facil.FrmCategoria.resources

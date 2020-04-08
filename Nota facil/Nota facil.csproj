@@ -74,6 +74,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
@@ -87,12 +88,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexao.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Conexao.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\Wscorreios\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="crypsenha.cs" />
     <Compile Include="FrmCadastrodecliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,11 +116,17 @@
     <Compile Include="Frmcaixa.Designer.cs">
       <DependentUpon>Frmcaixa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frmcliente.cs">
+    <Compile Include="FrmCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frmcliente.Designer.cs">
-      <DependentUpon>Frmcliente.cs</DependentUpon>
+    <Compile Include="FrmCategoria.Designer.cs">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmcliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmcliente.Designer.cs">
+      <DependentUpon>frmcliente.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmEstoque.cs">
       <SubType>Form</SubType>
@@ -143,6 +154,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Categoria.datasource" />
+    <None Include="Conexao.dbml.layout">
+      <DependentUpon>Conexao.dbml</DependentUpon>
+    </None>
     <EmbeddedResource Include="FrmCadastrodecliente.resx">
       <DependentUpon>FrmCadastrodecliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,8 +167,11 @@
     <EmbeddedResource Include="Frmcaixa.resx">
       <DependentUpon>Frmcaixa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frmcliente.resx">
-      <DependentUpon>Frmcliente.cs</DependentUpon>
+    <EmbeddedResource Include="FrmCategoria.resx">
+      <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmcliente.resx">
+      <DependentUpon>frmcliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEstoque.resx">
       <DependentUpon>FrmEstoque.cs</DependentUpon>
@@ -177,6 +195,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Conexao.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Conexao.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\Wscorreios\AtendeClienteService.wsdl" />
     <None Include="Connected Services\Wscorreios\Nota_facil.Wscorreios.atualizaPagamentoNaEntregaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -343,6 +366,7 @@
     <None Include="Connected Services\Wscorreios\Nota_facil.Wscorreios.VerificaSeTodosObjetosCanceladosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Produto.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -392,6 +416,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -41,12 +41,21 @@
             this.lblcad = new System.Windows.Forms.Label();
             this.lblcadestoque = new System.Windows.Forms.Label();
             this.lblestoque = new System.Windows.Forms.Label();
+            this.menu = new System.Windows.Forms.MenuStrip();
+            this.cadastraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estoqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.clienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.estoqueToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pgcliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pgcadastro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pgcaixa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pgestoque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pgcadestoque)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcsair)).BeginInit();
+            this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
             // pgcliente
@@ -122,7 +131,7 @@
             this.pcsair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pcsair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pcsair.Image = ((System.Drawing.Image)(resources.GetObject("pcsair.Image")));
-            this.pcsair.Location = new System.Drawing.Point(1298, 540);
+            this.pcsair.Location = new System.Drawing.Point(1298, 503);
             this.pcsair.Name = "pcsair";
             this.pcsair.Size = new System.Drawing.Size(181, 197);
             this.pcsair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -202,6 +211,81 @@
             this.lblestoque.TabIndex = 11;
             this.lblestoque.Text = "Estoque";
             // 
+            // menu
+            // 
+            this.menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.menu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastraToolStripMenuItem,
+            this.consultaToolStripMenuItem});
+            this.menu.Location = new System.Drawing.Point(0, 0);
+            this.menu.Name = "menu";
+            this.menu.Size = new System.Drawing.Size(1491, 28);
+            this.menu.TabIndex = 12;
+            this.menu.Text = "Menu de opções";
+            // 
+            // cadastraToolStripMenuItem
+            // 
+            this.cadastraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clienteToolStripMenuItem,
+            this.estoqueToolStripMenuItem,
+            this.categoriaToolStripMenuItem});
+            this.cadastraToolStripMenuItem.Name = "cadastraToolStripMenuItem";
+            this.cadastraToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            this.cadastraToolStripMenuItem.Text = "Cadastra";
+            this.cadastraToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            // 
+            // clienteToolStripMenuItem
+            // 
+            this.clienteToolStripMenuItem.BackColor = System.Drawing.SystemColors.Info;
+            this.clienteToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.clienteToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.clienteToolStripMenuItem.Text = "Cliente";
+            this.clienteToolStripMenuItem.Click += new System.EventHandler(this.clienteToolStripMenuItem_Click);
+            // 
+            // estoqueToolStripMenuItem
+            // 
+            this.estoqueToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.estoqueToolStripMenuItem.Name = "estoqueToolStripMenuItem";
+            this.estoqueToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.estoqueToolStripMenuItem.Text = "Estoque";
+            this.estoqueToolStripMenuItem.Click += new System.EventHandler(this.estoqueToolStripMenuItem_Click);
+            // 
+            // consultaToolStripMenuItem
+            // 
+            this.consultaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.clienteToolStripMenuItem1,
+            this.estoqueToolStripMenuItem1});
+            this.consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
+            this.consultaToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+            this.consultaToolStripMenuItem.Text = "Consulta";
+            // 
+            // clienteToolStripMenuItem1
+            // 
+            this.clienteToolStripMenuItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.clienteToolStripMenuItem1.Name = "clienteToolStripMenuItem1";
+            this.clienteToolStripMenuItem1.Size = new System.Drawing.Size(145, 26);
+            this.clienteToolStripMenuItem1.Text = "Cliente";
+            this.clienteToolStripMenuItem1.Click += new System.EventHandler(this.clienteToolStripMenuItem1_Click);
+            // 
+            // estoqueToolStripMenuItem1
+            // 
+            this.estoqueToolStripMenuItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.estoqueToolStripMenuItem1.Name = "estoqueToolStripMenuItem1";
+            this.estoqueToolStripMenuItem1.Size = new System.Drawing.Size(145, 26);
+            this.estoqueToolStripMenuItem1.Text = "Estoque";
+            this.estoqueToolStripMenuItem1.Click += new System.EventHandler(this.estoqueToolStripMenuItem1_Click);
+            // 
+            // categoriaToolStripMenuItem
+            // 
+            this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.categoriaToolStripMenuItem.Text = "Categoria";
+            this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.categoriaToolStripMenuItem_Click);
+            // 
             // Frmmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -221,8 +305,10 @@
             this.Controls.Add(this.pgcaixa);
             this.Controls.Add(this.pgcadastro);
             this.Controls.Add(this.pgcliente);
+            this.Controls.Add(this.menu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menu;
             this.Name = "Frmmenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
@@ -232,6 +318,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pgestoque)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pgcadestoque)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcsair)).EndInit();
+            this.menu.ResumeLayout(false);
+            this.menu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -251,5 +339,13 @@
         private System.Windows.Forms.Label lblcad;
         private System.Windows.Forms.Label lblcadestoque;
         private System.Windows.Forms.Label lblestoque;
+        private System.Windows.Forms.MenuStrip menu;
+        private System.Windows.Forms.ToolStripMenuItem cadastraToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estoqueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem estoqueToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem categoriaToolStripMenuItem;
     }
 }

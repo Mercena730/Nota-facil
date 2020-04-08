@@ -58,7 +58,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(858, 517);
+            this.pictureBox1.Location = new System.Drawing.Point(730, 517);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(152, 120);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -103,7 +103,7 @@
             this.lblsair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblsair.AutoSize = true;
             this.lblsair.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblsair.Location = new System.Drawing.Point(879, 615);
+            this.lblsair.Location = new System.Drawing.Point(754, 615);
             this.lblsair.Name = "lblsair";
             this.lblsair.Size = new System.Drawing.Size(40, 22);
             this.lblsair.TabIndex = 4;
@@ -130,7 +130,7 @@
             this.btnlogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnlogin.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlogin.Location = new System.Drawing.Point(724, 379);
+            this.btnlogin.Location = new System.Drawing.Point(907, 585);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(96, 40);
             this.btnlogin.TabIndex = 6;

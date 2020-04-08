@@ -54,6 +54,8 @@
             this.btnlimpar = new System.Windows.Forms.Button();
             this.pccliente = new System.Windows.Forms.PictureBox();
             this.Btncadastro = new System.Windows.Forms.Button();
+            this.txtcaminho = new System.Windows.Forms.TextBox();
+            this.lblcaminho = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pccliente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,17 +64,19 @@
             this.btnvoltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnvoltar.Image = ((System.Drawing.Image)(resources.GetObject("btnvoltar.Image")));
             this.btnvoltar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnvoltar.Location = new System.Drawing.Point(800, 629);
+            this.btnvoltar.Location = new System.Drawing.Point(825, 629);
             this.btnvoltar.Name = "btnvoltar";
-            this.btnvoltar.Size = new System.Drawing.Size(122, 44);
+            this.btnvoltar.Size = new System.Drawing.Size(84, 44);
             this.btnvoltar.TabIndex = 0;
             this.btnvoltar.Text = "voltar";
+            this.btnvoltar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnvoltar.UseVisualStyleBackColor = true;
             this.btnvoltar.Click += new System.EventHandler(this.btnvoltar_Click);
             // 
             // txtcpf
             // 
             this.txtcpf.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtcpf.BackColor = System.Drawing.Color.White;
             this.txtcpf.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcpf.Location = new System.Drawing.Point(156, 144);
             this.txtcpf.Name = "txtcpf";
@@ -97,16 +101,17 @@
             this.lblid.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblid.AutoSize = true;
             this.lblid.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblid.Location = new System.Drawing.Point(91, 201);
+            this.lblid.Location = new System.Drawing.Point(12, 203);
             this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(37, 33);
+            this.lblid.Size = new System.Drawing.Size(141, 33);
             this.lblid.TabIndex = 5;
-            this.lblid.Text = "id";
+            this.lblid.Text = "indeficador";
             this.lblid.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtid
             // 
             this.txtid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtid.Enabled = false;
             this.txtid.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtid.Location = new System.Drawing.Point(156, 201);
             this.txtid.Name = "txtid";
@@ -240,6 +245,7 @@
             // txtnome
             // 
             this.txtnome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtnome.CharacterCasing = System.Windows.Forms.CharacterCasing.Lower;
             this.txtnome.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtnome.Location = new System.Drawing.Point(156, 89);
             this.txtnome.Name = "txtnome";
@@ -256,7 +262,7 @@
             this.btnesqimg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnesqimg.Image = ((System.Drawing.Image)(resources.GetObject("btnesqimg.Image")));
             this.btnesqimg.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnesqimg.Location = new System.Drawing.Point(710, 429);
+            this.btnesqimg.Location = new System.Drawing.Point(717, 478);
             this.btnesqimg.Name = "btnesqimg";
             this.btnesqimg.Size = new System.Drawing.Size(217, 55);
             this.btnesqimg.TabIndex = 21;
@@ -291,11 +297,12 @@
             this.btnsair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnsair.Image = global::Nota_facil.Properties.Resources.sair;
             this.btnsair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnsair.Location = new System.Drawing.Point(692, 629);
+            this.btnsair.Location = new System.Drawing.Point(744, 629);
             this.btnsair.Name = "btnsair";
-            this.btnsair.Size = new System.Drawing.Size(102, 44);
+            this.btnsair.Size = new System.Drawing.Size(75, 44);
             this.btnsair.TabIndex = 25;
             this.btnsair.Text = "sair";
+            this.btnsair.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnsair.UseVisualStyleBackColor = true;
             this.btnsair.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -305,7 +312,7 @@
             this.btnlimpar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnlimpar.Image = global::Nota_facil.Properties.Resources.limpar;
             this.btnlimpar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnlimpar.Location = new System.Drawing.Point(269, 521);
+            this.btnlimpar.Location = new System.Drawing.Point(266, 521);
             this.btnlimpar.Name = "btnlimpar";
             this.btnlimpar.Size = new System.Drawing.Size(154, 57);
             this.btnlimpar.TabIndex = 24;
@@ -316,7 +323,7 @@
             // pccliente
             // 
             this.pccliente.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pccliente.Location = new System.Drawing.Point(644, 57);
+            this.pccliente.Location = new System.Drawing.Point(692, 42);
             this.pccliente.Name = "pccliente";
             this.pccliente.Size = new System.Drawing.Size(325, 365);
             this.pccliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -328,13 +335,32 @@
             this.Btncadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Btncadastro.Image = ((System.Drawing.Image)(resources.GetObject("Btncadastro.Image")));
             this.Btncadastro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btncadastro.Location = new System.Drawing.Point(928, 629);
+            this.Btncadastro.Location = new System.Drawing.Point(926, 629);
             this.Btncadastro.Name = "Btncadastro";
-            this.Btncadastro.Size = new System.Drawing.Size(124, 44);
+            this.Btncadastro.Size = new System.Drawing.Size(126, 44);
             this.Btncadastro.TabIndex = 10;
             this.Btncadastro.Text = "Cadastrar";
             this.Btncadastro.UseVisualStyleBackColor = true;
             this.Btncadastro.Click += new System.EventHandler(this.Btncadastro_Click);
+            // 
+            // txtcaminho
+            // 
+            this.txtcaminho.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtcaminho.Enabled = false;
+            this.txtcaminho.Location = new System.Drawing.Point(661, 439);
+            this.txtcaminho.Name = "txtcaminho";
+            this.txtcaminho.Size = new System.Drawing.Size(391, 22);
+            this.txtcaminho.TabIndex = 26;
+            // 
+            // lblcaminho
+            // 
+            this.lblcaminho.AutoSize = true;
+            this.lblcaminho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcaminho.Location = new System.Drawing.Point(575, 438);
+            this.lblcaminho.Name = "lblcaminho";
+            this.lblcaminho.Size = new System.Drawing.Size(80, 22);
+            this.lblcaminho.TabIndex = 27;
+            this.lblcaminho.Text = "Caminho";
             // 
             // FrmCadastrodecliente
             // 
@@ -342,6 +368,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Aqua;
             this.ClientSize = new System.Drawing.Size(1064, 685);
+            this.Controls.Add(this.lblcaminho);
+            this.Controls.Add(this.txtcaminho);
             this.Controls.Add(this.btnsair);
             this.Controls.Add(this.btnlimpar);
             this.Controls.Add(this.lblestado);
@@ -370,6 +398,7 @@
             this.Name = "FrmCadastrodecliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de cliente";
+            this.Load += new System.EventHandler(this.FrmCadastrodecliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pccliente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -403,5 +432,7 @@
         private System.Windows.Forms.TextBox txtestado;
         private System.Windows.Forms.Button btnlimpar;
         private System.Windows.Forms.Button btnsair;
+        private System.Windows.Forms.TextBox txtcaminho;
+        private System.Windows.Forms.Label lblcaminho;
     }
 }

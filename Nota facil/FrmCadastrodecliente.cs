@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Threading;
-using MySql.Data.MySqlClient;
+using System.Windows.Forms;
+using System.IO;
 namespace Nota_facil
 {
     public partial class FrmCadastrodecliente : Form
     {
         Thread Frmmenu;
         MySqlConnection con = new MySqlConnection("server=localhost;DataBase=nota_facil;uid=root;pwd=;");
+        MySqlDataReader reader;
         public FrmCadastrodecliente()
         {
             InitializeComponent();
@@ -33,19 +28,19 @@ namespace Nota_facil
 
         private void btnesqimg_Click(object sender, EventArgs e)
         {
-            if (ofdl.ShowDialog() == DialogResult.OK)
+            if(ofdl.ShowDialog() == DialogResult.OK)
             {
                 pccliente.ImageLocation = ofdl.FileName;
+                txtcaminho.Text = ofdl.FileName;
             }
         }
 
         private void btnlimpar_Click(object sender, EventArgs e)
         {
             txtcep.Clear();
-            txtcpf.Clear(); 
-            txtestado.Clear(); 
+            txtcpf.Clear();
+            txtestado.Clear();
             txtRua.Clear();
-            txtid.Clear();
             txtcidade.Clear();
             txtbairro.Clear();
             txtnumero.Clear();
@@ -59,11 +54,11 @@ namespace Nota_facil
 
         private void txtcep_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar== Convert.ToChar(Keys.Enter))
+            if(e.KeyChar == Convert.ToChar(Keys.Enter))
             {
                 if(!String.IsNullOrEmpty(txtcep.Text))
                 {
-                    using (var ws = new Wscorreios.AtendeClienteClient())
+                    using(var ws = new Wscorreios.AtendeClienteClient())
                     {
                         try
                         {
@@ -72,11 +67,11 @@ namespace Nota_facil
                             txtcidade.Text = Endereco.cidade;
                             txtbairro.Text = Endereco.bairro;
                             txtRua.Text = Endereco.end;
-                            
+
                         }
                         catch(Exception ex)
                         {
-                            MessageBox.Show(ex.Message,this.Text,MessageBoxButtons.OK,MessageBoxIcon.Error);
+                            MessageBox.Show(ex.Message, this.Text, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
@@ -89,20 +84,84 @@ namespace Nota_facil
 
         private void Btncadastro_Click(object sender, EventArgs e)
         {
+            Byte[] img = null;
+            FileStream fsyrm = new FileStream(this.txtcaminho.Text, FileMode.Open, FileAccess.Read);
+            BinaryReader br = new BinaryReader(fsyrm);
+            img = br.ReadBytes((int)fsyrm.Length);
             con.Open();
-            MySqlCommand com = new MySqlCommand("INSERT INTO cliente(cpf, id, Rua, cep, Estado, Numero, cidade, Bairro, Nome) VALUES ('" + txtcpf.Text + "'," + txtid.Text + ",'" + txtRua.Text + "','" + txtcep.Text + "','" + txtestado.Text + "','" + txtnumero.Text + "','" + txtcidade.Text + "','" + txtbairro.Text+"','" + txtnome.Text + "')", con);
-            com.ExecuteNonQuery();
+            MySqlCommand sqlCommand = new MySqlCommand("INSERT INTO cliente(cpf, id, Rua, cep, Estado,Numero,cidade,Bairro,Nome,img) VALUES(@cpf,@id,@Rua,@cep,@Estado,@Numero,@cidade,@Bairro,@Nome,@img)",con);
             try
             {
-                MessageBox.Show("Cliente cadastrado","\n",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-                con.Close();
+                sqlCommand.Parameters.Add(new MySqlParameter("@cpf", txtcpf.Text));
+                sqlCommand.Parameters.Add(new MySqlParameter("@id", txtid.Text));
+                sqlCommand.Parameters.Add(new MySqlParameter("@Rua", txtRua.Text));
+                sqlCommand.Parameters.Add(new MySqlParameter("@cep", txtcep.Text));
+                sqlCommand.Parameters.Add(new MySqlParameter("@Estado", txtestado.Text));
+                sqlCommand.Parameters.Add(new MySqlParameter("@Numero", txtnumero.Text));
+                sqlCommand.Parameters.Add(new MySqlParameter("@cidade", txtcidade.Text));
+                sqlCommand.Parameters.Add(new MySqlParameter("@Bairro", txtbairro.Text));
+                sqlCommand.Parameters.Add(new MySqlParameter("@Nome", txtnome.Text));
+                sqlCommand.Parameters.Add(new MySqlParameter("@img", img));
+                reader = sqlCommand.ExecuteReader();
+                MessageBox.Show("Cliente cadastrado", "\n", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.ToString());
+            }
+            finally
+            {
+              con.Close();
+                txtcep.Clear();
+                txtcpf.Clear();
+                txtestado.Clear();
+                txtRua.Clear();
+                txtid.Clear();
+                txtcidade.Clear();
+                txtbairro.Clear();
+                txtnumero.Clear();
+                txtnome.Clear();
+                txtcaminho.Clear();
+                pccliente.Image = null;
+                id();
+            }
+        }    
+        private void id()
+        {
+            con.Open();
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM cliente", con);
+            reader = comando.ExecuteReader();
+            try
+            {
+                
+                
+                if(reader.HasRows)
+                {
+                    while(reader.Read())
+                    {
+                        int id2 = 1;
+                        int id = Convert.ToInt32(reader[1].ToString());
+                        int soma = id2 + id;
+                        txtid.Text = Convert.ToString(soma);
+
+                    }
+                }
+                
+            }
+            catch(Exception erro)
+            {
+                
+                MessageBox.Show("erro" + erro);
+            }
+            finally
+            {
                 con.Close();
             }
-            
+        }
+
+        private void FrmCadastrodecliente_Load(object sender, EventArgs e)
+        {
+            id();
         }
     }
 }
