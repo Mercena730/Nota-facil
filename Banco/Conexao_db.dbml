@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="nota_facil" Class="Conexao_dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MATHEUS;Initial Catalog=nota_facil;Integrated Security=True" SettingsObjectName="Banco.Properties.Settings" SettingsPropertyName="nota_facilConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBL_categoria" Member="Categoria">
+    <Type Name="Categoria">
+      <Column Name="id_categoria" Member="Codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Desc_categoria" Member="Nome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="TBL_categoria_TBL_PRODUTO" Member="Produto" ThisKey="Codigo" OtherKey="Codigo_da_categoria" Type="Produto" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBL_PRODUTO" Member="Produto">
+    <Type Name="Produto">
+      <Column Name="Id_pruduto" Member="Codigo" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Desc_pruduto" Member="Nome" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="preco" Member="Valor" Type="System.Decimal" DbType="Decimal(3,2)" CanBeNull="true" />
+      <Column Name="id_categoria" Member="Codigo_da_categoria" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="TBL_categoria_TBL_PRODUTO" Member="Categoria" ThisKey="Codigo_da_categoria" OtherKey="Codigo" Type="Categoria" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
