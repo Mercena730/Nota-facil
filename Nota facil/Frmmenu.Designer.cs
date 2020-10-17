@@ -48,7 +48,6 @@
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clienteToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.estoqueToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pgcliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pgcadastro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pgcaixa)).BeginInit();
@@ -229,8 +228,7 @@
             // 
             this.cadastraToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clienteToolStripMenuItem,
-            this.estoqueToolStripMenuItem,
-            this.categoriaToolStripMenuItem});
+            this.estoqueToolStripMenuItem});
             this.cadastraToolStripMenuItem.Name = "cadastraToolStripMenuItem";
             this.cadastraToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.cadastraToolStripMenuItem.Text = "Cadastra";
@@ -267,7 +265,7 @@
             // 
             this.clienteToolStripMenuItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.clienteToolStripMenuItem1.Name = "clienteToolStripMenuItem1";
-            this.clienteToolStripMenuItem1.Size = new System.Drawing.Size(145, 26);
+            this.clienteToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.clienteToolStripMenuItem1.Text = "Cliente";
             this.clienteToolStripMenuItem1.Click += new System.EventHandler(this.clienteToolStripMenuItem1_Click);
             // 
@@ -275,16 +273,9 @@
             // 
             this.estoqueToolStripMenuItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.estoqueToolStripMenuItem1.Name = "estoqueToolStripMenuItem1";
-            this.estoqueToolStripMenuItem1.Size = new System.Drawing.Size(145, 26);
+            this.estoqueToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.estoqueToolStripMenuItem1.Text = "Estoque";
             this.estoqueToolStripMenuItem1.Click += new System.EventHandler(this.estoqueToolStripMenuItem1_Click);
-            // 
-            // categoriaToolStripMenuItem
-            // 
-            this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.categoriaToolStripMenuItem.Text = "Categoria";
-            this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.categoriaToolStripMenuItem_Click);
             // 
             // Frmmenu
             // 
@@ -346,6 +337,5 @@
         private System.Windows.Forms.ToolStripMenuItem consultaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem estoqueToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem categoriaToolStripMenuItem;
     }
 }

@@ -323,6 +323,7 @@
             // pccliente
             // 
             this.pccliente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pccliente.Image = ((System.Drawing.Image)(resources.GetObject("pccliente.Image")));
             this.pccliente.Location = new System.Drawing.Point(692, 42);
             this.pccliente.Name = "pccliente";
             this.pccliente.Size = new System.Drawing.Size(325, 365);

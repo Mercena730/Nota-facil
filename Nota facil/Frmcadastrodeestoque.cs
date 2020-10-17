@@ -23,5 +23,10 @@ namespace Nota_facil
         {
             Application.Run(new Frmmenu());
         }
+
+        private void Frmcadastrodeestoque_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

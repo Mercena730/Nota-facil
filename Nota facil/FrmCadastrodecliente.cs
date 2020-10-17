@@ -128,13 +128,11 @@ namespace Nota_facil
         }    
         private void id()
         {
-            con.Open();
-            MySqlCommand comando = new MySqlCommand("SELECT * FROM cliente", con);
-            reader = comando.ExecuteReader();
             try
             {
-                
-                
+                con.Open();
+                MySqlCommand comando = new MySqlCommand("SELECT * FROM cliente", con);
+                reader = comando.ExecuteReader();
                 if(reader.HasRows)
                 {
                     while(reader.Read())

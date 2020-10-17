@@ -160,6 +160,7 @@
             this.Controls.Add(this.btnpesquisa);
             this.Controls.Add(this.txtpesquisa);
             this.Controls.Add(this.listclient);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Frmcliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -88,11 +88,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conexao.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Conexao.dbml</DependentUpon>
-    </Compile>
     <Compile Include="Connected Services\Wscorreios\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -115,12 +110,6 @@
     </Compile>
     <Compile Include="Frmcaixa.Designer.cs">
       <DependentUpon>Frmcaixa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmCategoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCategoria.Designer.cs">
-      <DependentUpon>FrmCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="frmcliente.cs">
       <SubType>Form</SubType>
@@ -154,10 +143,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="Categoria.datasource" />
-    <None Include="Conexao.dbml.layout">
-      <DependentUpon>Conexao.dbml</DependentUpon>
-    </None>
     <EmbeddedResource Include="FrmCadastrodecliente.resx">
       <DependentUpon>FrmCadastrodecliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,9 +151,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frmcaixa.resx">
       <DependentUpon>Frmcaixa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmCategoria.resx">
-      <DependentUpon>FrmCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmcliente.resx">
       <DependentUpon>frmcliente.cs</DependentUpon>
@@ -195,11 +177,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Conexao.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>Conexao.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\Wscorreios\AtendeClienteService.wsdl" />
     <None Include="Connected Services\Wscorreios\Nota_facil.Wscorreios.atualizaPagamentoNaEntregaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
