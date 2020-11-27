@@ -44,7 +44,6 @@ C:\git\suporte informant\Nota facil\Nota facil\obj\Debug\Nota facil.csproj.Resol
 C:\git\suporte informant\Nota facil\Nota facil\obj\Debug\Nota_facil.FrmCadastrodecliente.resources
 C:\git\suporte informant\Nota facil\Nota facil\obj\Debug\Nota_facil.Frmcadastrodeestoque.resources
 C:\git\suporte informant\Nota facil\Nota facil\obj\Debug\Nota_facil.Frmcaixa.resources
-C:\git\suporte informant\Nota facil\Nota facil\obj\Debug\Nota_facil.FrmCategoria.resources
 C:\git\suporte informant\Nota facil\Nota facil\obj\Debug\Nota_facil.Frmcliente.resources
 C:\git\suporte informant\Nota facil\Nota facil\obj\Debug\Nota_facil.FrmEstoque.resources
 C:\git\suporte informant\Nota facil\Nota facil\obj\Debug\Nota_facil.Frminicio.resources
@@ -58,15 +57,6 @@ C:\git\suporte informant\Nota facil\Nota facil\obj\Debug\Nota facil.pdb
 C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\Nota facil.exe.config
 C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\Nota facil.exe
 C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\Nota facil.pdb
-C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\BouncyCastle.Crypto.dll
-C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\Google.Protobuf.dll
-C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\MySql.Data.dll
-C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\MySql.Data.EntityFramework.dll
-C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\MySQL.Data.EntityFrameworkCore.Design.dll
-C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\MySQL.Data.EntityFrameworkCore.dll
-C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\MySql.Web.dll
-C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\Renci.SshNet.dll
-C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\SshNet.Security.Cryptography.dll
 C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\MySql.Data.xml
 C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\MySql.Data.EntityFramework.xml
 C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\MySQL.Data.EntityFrameworkCore.xml
@@ -75,3 +65,5 @@ C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\MySql.Web.xml
 C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\Interop.WMPLib.dll
 C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\AxInterop.WMPLib.dll
 C:\git\suporte informant\Nota facil\Nota facil\obj\Debug\Nota facil.csproj.CopyComplete
+C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\Nota facil.exe.CodeAnalysisLog.xml
+C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\Nota facil.exe.lastcodeanalysissucceeded
