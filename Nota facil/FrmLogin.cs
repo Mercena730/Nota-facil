@@ -8,6 +8,7 @@ namespace Nota_facil
     {
         int count;
         Thread Frmmenu;
+        Thread Frmcadastro;
         int tempo = 180;
         int segundo = 0;
         int minutos = 0;
@@ -107,6 +108,10 @@ namespace Nota_facil
         {
             Application.Run(new Frmmenu());
         }
+        private void frmcadastra()
+        {
+            Application.Run(new Frmcadastrologin());
+        }
         private void TMtemp_Tick(object sender, EventArgs e)
         {
             segundo--;
@@ -127,6 +132,22 @@ namespace Nota_facil
                 btnlogin.Enabled = true;
                 lbltmp.Visible = false;
             }
+        }
+
+        private void Btncadastra_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Frmcadastro = new Thread(frmcadastra);
+            Frmcadastro.SetApartmentState(ApartmentState.MTA);
+            Frmcadastro.Start();
+        }
+
+        private void Btnsair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Frmmenu = new Thread(frmmenu);
+            Frmmenu.SetApartmentState(ApartmentState.MTA);
+            Frmmenu.Start();
         }
     }
 }

@@ -127,6 +127,12 @@
     <Compile Include="Frmcadastrodeestoque.Designer.cs">
       <DependentUpon>Frmcadastrodeestoque.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frmcadastrologin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmcadastrologin.Designer.cs">
+      <DependentUpon>Frmcadastrologin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frmcaixa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frmcadastrodeestoque.resx">
       <DependentUpon>Frmcadastrodeestoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmcadastrologin.resx">
+      <DependentUpon>Frmcadastrologin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frmcaixa.resx">
       <DependentUpon>Frmcaixa.cs</DependentUpon>

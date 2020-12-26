@@ -35,8 +35,10 @@
             this.btnlogin = new System.Windows.Forms.Button();
             this.lbltmp = new System.Windows.Forms.Label();
             this.TMtemp = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.Btnsair = new System.Windows.Forms.Button();
             this.txtlogin = new System.Windows.Forms.TextBox();
+            this.Btncadastra = new System.Windows.Forms.Button();
+            this.senha = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Lblsenha
@@ -59,7 +61,7 @@
             this.txtsenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtsenha.BackColor = System.Drawing.Color.White;
             this.txtsenha.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsenha.Location = new System.Drawing.Point(218, 250);
+            this.txtsenha.Location = new System.Drawing.Point(218, 286);
             this.txtsenha.Name = "txtsenha";
             this.txtsenha.PasswordChar = '*';
             this.txtsenha.Size = new System.Drawing.Size(465, 42);
@@ -69,7 +71,7 @@
             // btnlogin
             // 
             this.btnlogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnlogin.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btnlogin.BackColor = System.Drawing.SystemColors.Window;
             this.btnlogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnlogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -103,23 +105,24 @@
             this.TMtemp.Interval = 1000;
             this.TMtemp.Tick += new System.EventHandler(this.TMtemp_Tick);
             // 
-            // button1
+            // Btnsair
             // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.Red;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.Location = new System.Drawing.Point(597, 366);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 52);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Sair";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
+            this.Btnsair.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Btnsair.BackColor = System.Drawing.Color.White;
+            this.Btnsair.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.Btnsair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Btnsair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Btnsair.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btnsair.Image = ((System.Drawing.Image)(resources.GetObject("Btnsair.Image")));
+            this.Btnsair.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Btnsair.Location = new System.Drawing.Point(597, 366);
+            this.Btnsair.Name = "Btnsair";
+            this.Btnsair.Size = new System.Drawing.Size(102, 52);
+            this.Btnsair.TabIndex = 9;
+            this.Btnsair.Text = "Sair";
+            this.Btnsair.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Btnsair.UseVisualStyleBackColor = false;
+            this.Btnsair.Click += new System.EventHandler(this.Btnsair_Click);
             // 
             // txtlogin
             // 
@@ -132,6 +135,34 @@
             this.txtlogin.TabIndex = 10;
             this.txtlogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // Btncadastra
+            // 
+            this.Btncadastra.BackColor = System.Drawing.SystemColors.Window;
+            this.Btncadastra.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btncadastra.Location = new System.Drawing.Point(768, 535);
+            this.Btncadastra.Name = "Btncadastra";
+            this.Btncadastra.Size = new System.Drawing.Size(256, 88);
+            this.Btncadastra.TabIndex = 11;
+            this.Btncadastra.Text = "cadastra";
+            this.Btncadastra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.Btncadastra.UseVisualStyleBackColor = false;
+            this.Btncadastra.Click += new System.EventHandler(this.Btncadastra_Click);
+            // 
+            // senha
+            // 
+            this.senha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.senha.AutoSize = true;
+            this.senha.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.senha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.senha.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.senha.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.senha.ForeColor = System.Drawing.Color.White;
+            this.senha.Location = new System.Drawing.Point(218, 237);
+            this.senha.Name = "senha";
+            this.senha.Size = new System.Drawing.Size(278, 48);
+            this.senha.TabIndex = 12;
+            this.senha.Text = "Insira sua senha";
+            // 
             // Frmlogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -139,8 +170,10 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1036, 649);
+            this.Controls.Add(this.senha);
+            this.Controls.Add(this.Btncadastra);
             this.Controls.Add(this.txtlogin);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Btnsair);
             this.Controls.Add(this.lbltmp);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.txtsenha);
@@ -161,7 +194,9 @@
         private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.Label lbltmp;
         private System.Windows.Forms.Timer TMtemp;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Btnsair;
         private System.Windows.Forms.TextBox txtlogin;
+        private System.Windows.Forms.Button Btncadastra;
+        private System.Windows.Forms.Label senha;
     }
 }
