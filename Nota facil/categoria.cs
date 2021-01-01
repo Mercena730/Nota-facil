@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Threading;
-using MySql.Data.MySqlClient;
+using System.Windows.Forms;
 
 namespace Nota_facil
 {
@@ -36,15 +29,11 @@ namespace Nota_facil
         private void btncadastra_Click(object sender, EventArgs e)
         {
             con.Open();
-            MySqlCommand sqlCommand = new MySqlCommand("INSERT INTO tb_produto(ID,Nome,categoria,subcategoria, preco, img) VALUES(@ID,@Nome,@categoria,@subcategoria,@preco,@img)", con);
+            MySqlCommand sqlCommand = new MySqlCommand("INSERT INTO categoria(categoria,subcategoria) VALUES(@categoria,@subcategoria)", con);
             try
             {
-                sqlCommand.Parameters.Add(new MySqlParameter("@ID", txtid.Text));
-                sqlCommand.Parameters.Add(new MySqlParameter("@Nome", txtdescricao.Text));
-                sqlCommand.Parameters.Add(new MySqlParameter("@categoria", cmbcatecoria.Text));
-                sqlCommand.Parameters.Add(new MySqlParameter("@subcategoria", cmbsubcategoria.Text));
-                sqlCommand.Parameters.Add(new MySqlParameter("@preco", txtvalor.Text));
-                sqlCommand.Parameters.Add(new MySqlParameter("@img", img));
+                sqlCommand.Parameters.Add(new MySqlParameter("@categoria", txtcategoria.Text));
+                sqlCommand.Parameters.Add(new MySqlParameter("@subcategoria", txtsubcategoria.Text));
                 Reader = sqlCommand.ExecuteReader();
                 MessageBox.Show("produto cadastrado", "\n", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -61,5 +50,5 @@ namespace Nota_facil
             }
         }
     }
-    }
 }
+

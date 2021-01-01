@@ -1,8 +1,8 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.IO;
 using System.Threading;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
-using System.IO;
 namespace Nota_facil
 {
     public partial class Frmcadastrodeestoque : Form
@@ -29,7 +29,44 @@ namespace Nota_facil
 
         private void Frmcadastrodeestoque_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                MySqlCommand comando = new MySqlCommand("SELECT categoria FROM categoria", con);
+                con.Open();
+                Reader = comando.ExecuteReader();
+                if(Reader.HasRows)
+                {
+                    while(Reader.Read())
+                    {
+                        cmbcatecoria.Items.Add(Reader[0].ToString());
+                    }
+                }
+                con.Close();
+            }
+            catch(Exception erro)
+            {
+                con.Close();
+                MessageBox.Show("erro" + erro);
+            }
+            try
+            {
+                MySqlCommand comando = new MySqlCommand("SELECT subcategoria FROM categoria", con);
+                con.Open();
+                Reader = comando.ExecuteReader();
+                if(Reader.HasRows)
+                {
+                    while(Reader.Read())
+                    {
+                        cmbsubcategoria.Items.Add(Reader[0].ToString());
+                    }
+                }
+                con.Close();
+            }
+            catch(Exception erro)
+            {
+                con.Close();
+                MessageBox.Show("erro" + erro);
+            }
         }
 
         private void Btncadastra_Click(object sender, EventArgs e)
@@ -39,7 +76,7 @@ namespace Nota_facil
             BinaryReader br = new BinaryReader(fsyrm);
             img = br.ReadBytes((int)fsyrm.Length);
             con.Open();
-            MySqlCommand sqlCommand = new MySqlCommand("INSERT INTO tb_produto(ID,Nome,categoria,subcategoria, preco, img) VALUES(@ID,@Nome,@categoria,@subcategoria,@preco,@img)", con);
+            MySqlCommand sqlCommand = new MySqlCommand("INSERT INTO tb_produto(ID,Nome,categoria,subcategoria,preco, img,quantidade) VALUES(@ID,@Nome,@categoria,@subcategoria,@preco,@img,@quantidade)", con);
             try
             {
                 sqlCommand.Parameters.Add(new MySqlParameter("@ID", txtid.Text));
@@ -48,6 +85,7 @@ namespace Nota_facil
                 sqlCommand.Parameters.Add(new MySqlParameter("@subcategoria", cmbsubcategoria.Text));
                 sqlCommand.Parameters.Add(new MySqlParameter("@preco", txtvalor.Text));
                 sqlCommand.Parameters.Add(new MySqlParameter("@img", img));
+                sqlCommand.Parameters.Add(new MySqlParameter("@quantidade", txtquan.Text));
                 Reader = sqlCommand.ExecuteReader();
                 MessageBox.Show("produto cadastrado", "\n", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -65,7 +103,7 @@ namespace Nota_facil
                 cmbsubcategoria.Text = null;
                 pcbproduto.ImageLocation = null;
                 txtvalor.Clear();
-                
+
             }
         }
 
@@ -89,4 +127,5 @@ namespace Nota_facil
             pcbproduto.ImageLocation = null;
         }
     }
- }
+}
+

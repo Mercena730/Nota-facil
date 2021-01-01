@@ -65,6 +65,10 @@ namespace Nota_facil
             frmcadastrodeestoque.SetApartmentState(ApartmentState.STA);
             frmcadastrodeestoque.Start();
         }
+        private void Frmcategoria()
+        {
+            Application.Run(new categoria());
+        }
         private void Frmcliente()
         {
             Application.Run(new Frmcliente());
@@ -114,6 +118,14 @@ namespace Nota_facil
             frmestoque = new Thread(Frmestoque);
             frmestoque.SetApartmentState(ApartmentState.MTA);
             frmestoque.Start();
+        }
+
+        private void categoriaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmcategoria = new Thread(Frmcategoria);
+            frmcategoria.SetApartmentState(ApartmentState.MTA);
+            frmcategoria.Start();
         }
     }
 }

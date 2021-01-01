@@ -139,6 +139,8 @@
             // 
             this.Btncadastra.BackColor = System.Drawing.SystemColors.Window;
             this.Btncadastra.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btncadastra.Image = ((System.Drawing.Image)(resources.GetObject("Btncadastra.Image")));
+            this.Btncadastra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Btncadastra.Location = new System.Drawing.Point(768, 535);
             this.Btncadastra.Name = "Btncadastra";
             this.Btncadastra.Size = new System.Drawing.Size(256, 88);

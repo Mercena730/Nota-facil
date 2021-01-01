@@ -1,8 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.IO;
 using System.Threading;
 using System.Windows.Forms;
-using System.IO;
 namespace Nota_facil
 {
     public partial class FrmCadastrodecliente : Form
@@ -89,7 +89,7 @@ namespace Nota_facil
             BinaryReader br = new BinaryReader(fsyrm);
             img = br.ReadBytes((int)fsyrm.Length);
             con.Open();
-            MySqlCommand sqlCommand = new MySqlCommand("INSERT INTO cliente(cpf, id, Rua, cep, Estado,Numero,cidade,Bairro,Nome,img) VALUES(@cpf,@id,@Rua,@cep,@Estado,@Numero,@cidade,@Bairro,@Nome,@img)",con);
+            MySqlCommand sqlCommand = new MySqlCommand("INSERT INTO cliente(cpf, id, Rua, cep, Estado,Numero,cidade,Bairro,Nome,img) VALUES(@cpf,@id,@Rua,@cep,@Estado,@Numero,@cidade,@Bairro,@Nome,@img)", con);
             try
             {
                 sqlCommand.Parameters.Add(new MySqlParameter("@cpf", txtcpf.Text));
@@ -111,7 +111,7 @@ namespace Nota_facil
             }
             finally
             {
-              con.Close();
+                con.Close();
                 txtcep.Clear();
                 txtcpf.Clear();
                 txtestado.Clear();
@@ -125,7 +125,7 @@ namespace Nota_facil
                 pccliente.Image = null;
                 id();
             }
-        }    
+        }
         private void id()
         {
             try
@@ -144,11 +144,11 @@ namespace Nota_facil
 
                     }
                 }
-                
+
             }
             catch(Exception erro)
             {
-                
+
                 MessageBox.Show("erro" + erro);
             }
             finally

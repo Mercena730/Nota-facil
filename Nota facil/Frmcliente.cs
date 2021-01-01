@@ -1,9 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Text.RegularExpressions;
+using System.IO;
 using System.Threading;
 using System.Windows.Forms;
-using System.IO;
 namespace Nota_facil
 {
     public partial class Frmcliente : Form
@@ -64,15 +63,15 @@ namespace Nota_facil
                 {
                     while(ler.Read())
                     {
-                        string dados ="cpf:"+ler.GetString("cpf")+"\n"+ler.GetString("Rua")+"\n"+"Cep:"+ler.GetString("cep")+"\n"+"Estado:"+ler.GetString("Estado")+"\n"+"Numero: "+ler.GetString("Numero")+"\n"+"cidade:"+ler.GetString("cidade")+"\n"+"bairro:"+ler.GetString("Bairro");
-                        string stringComOCaracter=dados;
+                        string dados = "cpf:" + ler.GetString("cpf") + "\n" + ler.GetString("Rua") + "\n" + "Cep:" + ler.GetString("cep") + "\n" + "Estado:" + ler.GetString("Estado") + "\n" + "Numero: " + ler.GetString("Numero") + "\n" + "cidade:" + ler.GetString("cidade") + "\n" + "bairro:" + ler.GetString("Bairro");
+                        string stringComOCaracter = dados;
                         string stringTratada;
                         stringTratada = stringComOCaracter.Replace("\n", Environment.NewLine);
-                        txtdadoscliente.Text =stringTratada;
+                        txtdadoscliente.Text = stringTratada;
                         Byte[] img = (Byte[])(ler["img"]);
                         if(img == null)
                         {
-                            imgcliente.ImageLocation= "C:/git/Infor ramos/Nota facil/Nota facil/bin/Debug/Fotos/user.jpg";
+                            imgcliente.ImageLocation = "C:/git/Infor ramos/Nota facil/Nota facil/bin/Debug/Fotos/user.jpg";
                         }
                         else
                         {
@@ -88,7 +87,7 @@ namespace Nota_facil
             }
             finally
             {
-              con.Close();
+                con.Close();
             }
         }
         private void Frmcliente_Load(object sender, EventArgs e)

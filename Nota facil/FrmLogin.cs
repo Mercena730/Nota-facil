@@ -32,7 +32,8 @@ namespace Nota_facil
         {
             count = count + 1;
             var login = "mercena";
-            var senha = "123";
+            string senha = "123";
+            string senhaCriptografada = MD5Hash.CalculaHash(senha);
             if(senha == txtsenha.Text && login == txtlogin.Text)
             {
 
@@ -44,7 +45,7 @@ namespace Nota_facil
             }
             else if(txtsenha.Text == "")
             {
-                
+
                 MessageBox.Show("Preencha os campos vazio com dados pedidos");
                 if(count > 5)
                 {
@@ -74,7 +75,7 @@ namespace Nota_facil
             }
             else
             {
-                
+
                 MessageBox.Show("Senha ou usuario Não exitem nos dados");
                 if(count > 5)
                 {
@@ -102,7 +103,6 @@ namespace Nota_facil
                     Application.Exit();
                 }
             }
-
         }
         private void frmmenu()
         {
@@ -144,10 +144,29 @@ namespace Nota_facil
 
         private void Btnsair_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Frmmenu = new Thread(frmmenu);
-            Frmmenu.SetApartmentState(ApartmentState.MTA);
-            Frmmenu.Start();
+            Application.Exit();
+        }
+    }
+    public static class MD5Hash
+    {
+        public static string CalculaHash(string Senha)
+        {
+            try
+            {
+                System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create();
+                byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(Senha);
+                byte[] hash = md5.ComputeHash(inputBytes);
+                System.Text.StringBuilder sb = new System.Text.StringBuilder();
+                for(int i = 0; i < hash.Length; i++)
+                {
+                    sb.Append(hash[i].ToString("X2"));
+                }
+                return sb.ToString(); // Retorna senha criptografada 
+            }
+            catch(Exception)
+            {
+                return null; // Caso encontre erro retorna nulo
+            }
         }
     }
 }

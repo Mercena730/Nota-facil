@@ -75,12 +75,14 @@ namespace Nota_facil
             // btncadastra
             // 
             this.btncadastra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btncadastra.Image = ((System.Drawing.Image)(resources.GetObject("btncadastra.Image")));
             this.btncadastra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btncadastra.Location = new System.Drawing.Point(191, 225);
             this.btncadastra.Name = "btncadastra";
             this.btncadastra.Size = new System.Drawing.Size(103, 50);
             this.btncadastra.TabIndex = 4;
             this.btncadastra.Text = "cadastra ";
+            this.btncadastra.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btncadastra.UseVisualStyleBackColor = true;
             this.btncadastra.Click += new System.EventHandler(this.btncadastra_Click);
             // 

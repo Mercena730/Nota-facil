@@ -34,7 +34,9 @@ namespace Nota_facil
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtsenha = new System.Windows.Forms.TextBox();
             this.lblsenha = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btncad = new System.Windows.Forms.Button();
+            this.chteste = new System.Windows.Forms.CheckBox();
+            this.btnpagar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbllogin
@@ -70,21 +72,48 @@ namespace Nota_facil
             this.lblsenha.TabIndex = 4;
             this.lblsenha.Text = "senha";
             // 
-            // button1
+            // btncad
             // 
-            this.button1.Location = new System.Drawing.Point(588, 533);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 61);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btncad.Image = ((System.Drawing.Image)(resources.GetObject("btncad.Image")));
+            this.btncad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btncad.Location = new System.Drawing.Point(511, 452);
+            this.btncad.Name = "btncad";
+            this.btncad.Size = new System.Drawing.Size(220, 61);
+            this.btncad.TabIndex = 5;
+            this.btncad.Text = "Cadastra";
+            this.btncad.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btncad.UseVisualStyleBackColor = true;
+            // 
+            // chteste
+            // 
+            this.chteste.AutoSize = true;
+            this.chteste.Location = new System.Drawing.Point(12, 544);
+            this.chteste.Name = "chteste";
+            this.chteste.Size = new System.Drawing.Size(286, 50);
+            this.chteste.TabIndex = 6;
+            this.chteste.Text = "Testa programa";
+            this.chteste.UseVisualStyleBackColor = true;
+            // 
+            // btnpagar
+            // 
+            this.btnpagar.Image = ((System.Drawing.Image)(resources.GetObject("btnpagar.Image")));
+            this.btnpagar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnpagar.Location = new System.Drawing.Point(546, 519);
+            this.btnpagar.Name = "btnpagar";
+            this.btnpagar.Size = new System.Drawing.Size(185, 61);
+            this.btnpagar.TabIndex = 7;
+            this.btnpagar.Text = "Pagar";
+            this.btnpagar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnpagar.UseVisualStyleBackColor = true;
             // 
             // Frmcadastrologin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(22F, 46F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(743, 606);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnpagar);
+            this.Controls.Add(this.chteste);
+            this.Controls.Add(this.btncad);
             this.Controls.Add(this.lblsenha);
             this.Controls.Add(this.txtsenha);
             this.Controls.Add(this.textBox1);
@@ -106,6 +135,8 @@ namespace Nota_facil
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TextBox txtsenha;
         private System.Windows.Forms.Label lblsenha;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btncad;
+        private System.Windows.Forms.CheckBox chteste;
+        private System.Windows.Forms.Button btnpagar;
     }
 }

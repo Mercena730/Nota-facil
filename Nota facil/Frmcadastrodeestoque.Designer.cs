@@ -48,6 +48,8 @@
             this.subcatgoria = new System.Windows.Forms.Label();
             this.cmbsubcategoria = new System.Windows.Forms.ComboBox();
             this.ofdl = new System.Windows.Forms.OpenFileDialog();
+            this.lblqua = new System.Windows.Forms.Label();
+            this.txtquan = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pcbproduto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,7 +121,7 @@
             this.Btncadastra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.Btncadastra.Image = ((System.Drawing.Image)(resources.GetObject("Btncadastra.Image")));
             this.Btncadastra.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Btncadastra.Location = new System.Drawing.Point(12, 423);
+            this.Btncadastra.Location = new System.Drawing.Point(352, 517);
             this.Btncadastra.Name = "Btncadastra";
             this.Btncadastra.Size = new System.Drawing.Size(143, 49);
             this.Btncadastra.TabIndex = 9;
@@ -145,7 +147,7 @@
             this.btncanc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btncanc.Image = ((System.Drawing.Image)(resources.GetObject("btncanc.Image")));
             this.btncanc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btncanc.Location = new System.Drawing.Point(197, 423);
+            this.btncanc.Location = new System.Drawing.Point(516, 517);
             this.btncanc.Name = "btncanc";
             this.btncanc.Size = new System.Drawing.Size(129, 49);
             this.btncanc.TabIndex = 11;
@@ -231,9 +233,9 @@
             this.txtcaminho.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.txtcaminho.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtcaminho.Enabled = false;
-            this.txtcaminho.Location = new System.Drawing.Point(568, 461);
+            this.txtcaminho.Location = new System.Drawing.Point(584, 472);
             this.txtcaminho.Name = "txtcaminho";
-            this.txtcaminho.Size = new System.Drawing.Size(314, 22);
+            this.txtcaminho.Size = new System.Drawing.Size(290, 22);
             this.txtcaminho.TabIndex = 22;
             // 
             // lblcaminho
@@ -241,7 +243,7 @@
             this.lblcaminho.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lblcaminho.AutoSize = true;
             this.lblcaminho.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblcaminho.Location = new System.Drawing.Point(482, 460);
+            this.lblcaminho.Location = new System.Drawing.Point(580, 436);
             this.lblcaminho.Name = "lblcaminho";
             this.lblcaminho.Size = new System.Drawing.Size(80, 22);
             this.lblcaminho.TabIndex = 28;
@@ -277,11 +279,37 @@
             // 
             this.ofdl.FileName = "ofdl";
             // 
+            // lblqua
+            // 
+            this.lblqua.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblqua.AutoSize = true;
+            this.lblqua.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblqua.Location = new System.Drawing.Point(14, 407);
+            this.lblqua.Name = "lblqua";
+            this.lblqua.Size = new System.Drawing.Size(123, 27);
+            this.lblqua.TabIndex = 31;
+            this.lblqua.Text = "Quantidade";
+            // 
+            // txtquan
+            // 
+            this.txtquan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtquan.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtquan.Location = new System.Drawing.Point(19, 436);
+            this.txtquan.Name = "txtquan";
+            this.txtquan.Size = new System.Drawing.Size(543, 39);
+            this.txtquan.TabIndex = 32;
+            // 
             // Frmcadastrodeestoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 578);
+            this.Controls.Add(this.txtquan);
+            this.Controls.Add(this.lblqua);
             this.Controls.Add(this.cmbsubcategoria);
             this.Controls.Add(this.subcatgoria);
             this.Controls.Add(this.lblcaminho);
@@ -332,5 +360,7 @@
         private System.Windows.Forms.Label subcatgoria;
         private System.Windows.Forms.ComboBox cmbsubcategoria;
         private System.Windows.Forms.OpenFileDialog ofdl;
+        private System.Windows.Forms.Label lblqua;
+        private System.Windows.Forms.TextBox txtquan;
     }
 }
