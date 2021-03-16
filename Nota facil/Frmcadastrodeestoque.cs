@@ -8,13 +8,12 @@ namespace Nota_facil
     public partial class Frmcadastrodeestoque : Form
     {
         Thread Frmmenu;
-        MySqlConnection con = new MySqlConnection("server=localhost;DataBase=nota_facil;uid=root;pwd=;");
-        MySqlDataReader Reader;
+        MySqlConnection con = new MySqlConnection("server=localhost:8080;DataBase=nota_facil;uid=root;pwd=;");
+        MySqlDataReader ler;
         public Frmcadastrodeestoque()
         {
             InitializeComponent();
         }
-
         private void btnvolatr_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -26,59 +25,21 @@ namespace Nota_facil
         {
             Application.Run(new Frmmenu());
         }
-
         private void Frmcadastrodeestoque_Load(object sender, EventArgs e)
         {
-            try
-            {
-                MySqlCommand comando = new MySqlCommand("SELECT categoria FROM categoria", con);
-                con.Open();
-                Reader = comando.ExecuteReader();
-                if(Reader.HasRows)
-                {
-                    while(Reader.Read())
-                    {
-                        cmbcatecoria.Items.Add(Reader[0].ToString());
-                    }
-                }
-                con.Close();
-            }
-            catch(Exception erro)
-            {
-                con.Close();
-                MessageBox.Show("erro" + erro);
-            }
-            try
-            {
-                MySqlCommand comando = new MySqlCommand("SELECT subcategoria FROM categoria", con);
-                con.Open();
-                Reader = comando.ExecuteReader();
-                if(Reader.HasRows)
-                {
-                    while(Reader.Read())
-                    {
-                        cmbsubcategoria.Items.Add(Reader[0].ToString());
-                    }
-                }
-                con.Close();
-            }
-            catch(Exception erro)
-            {
-                con.Close();
-                MessageBox.Show("erro" + erro);
-            }
+            Subcategoria();
+            Categoria();
         }
-
         private void Btncadastra_Click(object sender, EventArgs e)
         {
             Byte[] img = null;
             FileStream fsyrm = new FileStream(this.txtcaminho.Text, FileMode.Open, FileAccess.Read);
             BinaryReader br = new BinaryReader(fsyrm);
             img = br.ReadBytes((int)fsyrm.Length);
-            con.Open();
-            MySqlCommand sqlCommand = new MySqlCommand("INSERT INTO tb_produto(ID,Nome,categoria,subcategoria,preco, img,quantidade) VALUES(@ID,@Nome,@categoria,@subcategoria,@preco,@img,@quantidade)", con);
             try
             {
+                con.Open();
+                MySqlCommand sqlCommand = new MySqlCommand("INSERT INTO tb_produto(ID,Nome,categoria,subcategoria,preco, img,quantidade) VALUES(@ID,@Nome,@categoria,@subcategoria,@preco,@img,@quantidade)", con);
                 sqlCommand.Parameters.Add(new MySqlParameter("@ID", txtid.Text));
                 sqlCommand.Parameters.Add(new MySqlParameter("@Nome", txtdescricao.Text));
                 sqlCommand.Parameters.Add(new MySqlParameter("@categoria", cmbcatecoria.Text));
@@ -86,7 +47,7 @@ namespace Nota_facil
                 sqlCommand.Parameters.Add(new MySqlParameter("@preco", txtvalor.Text));
                 sqlCommand.Parameters.Add(new MySqlParameter("@img", img));
                 sqlCommand.Parameters.Add(new MySqlParameter("@quantidade", txtquan.Text));
-                Reader = sqlCommand.ExecuteReader();
+                ler = sqlCommand.ExecuteReader();
                 MessageBox.Show("produto cadastrado", "\n", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             catch(Exception ex)
@@ -115,7 +76,6 @@ namespace Nota_facil
                 txtcaminho.Text = ofdl.FileName;
             }
         }
-
         private void BtnDeletar_Click(object sender, EventArgs e)
         {
             txtvalor.Clear();
@@ -125,6 +85,50 @@ namespace Nota_facil
             cmbcatecoria.Text = null;
             cmbsubcategoria.Text = null;
             pcbproduto.ImageLocation = null;
+        }
+        private void Subcategoria()
+        {
+            try
+            {
+                MySqlCommand comando = new MySqlCommand("SELECT subcategoria FROM categoria", con);
+                con.Open();
+                ler = comando.ExecuteReader();
+                if(ler.HasRows)
+                {
+                    while(ler.Read())
+                    {
+                        cmbsubcategoria.Items.Add(ler[0].ToString());
+                    }
+                }
+                con.Close();
+            }
+            catch(Exception erro)
+            {
+                con.Close();
+                MessageBox.Show("erro" + erro);
+            }
+        }
+        private void Categoria()
+        {
+            try
+            {
+                MySqlCommand comando = new MySqlCommand("SELECT * FROM categoria", con);
+                con.Open();
+                ler = comando.ExecuteReader();
+                if(ler.HasRows)
+                {
+                    while(ler.Read())
+                    {
+                        cmbcatecoria.Items.Add(ler[1].ToString());
+                    }
+                }
+                con.Close();
+            }
+            catch(Exception erro)
+            {
+                con.Close();
+                MessageBox.Show("erro" + erro);
+            }
         }
     }
 }

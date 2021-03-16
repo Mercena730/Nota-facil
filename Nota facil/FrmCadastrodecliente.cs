@@ -137,7 +137,7 @@ namespace Nota_facil
                 {
                     while(reader.Read())
                     {
-                        int id2 = 1;
+                        int id2 = 0;
                         int id = Convert.ToInt32(reader[1].ToString());
                         int soma = id2 + id;
                         txtid.Text = Convert.ToString(soma);

@@ -85,3 +85,23 @@ C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\MySql.Data.EntityFramew
 C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\MySql.Web.dll
 C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\Renci.SshNet.dll
 C:\git\suporte informant\Nota facil\Nota facil\bin\Debug\SshNet.Security.Cryptography.dll
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\Nota facil.csprojAssemblyReference.cache
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\Nota facil.exe.config
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\Interop.WMPLib.dll
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\AxInterop.WMPLib.dll
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\Nota facil.csproj.ResolveComReference.cache
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\Nota_facil.categoria.resources
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\Nota_facil.FrmCadastrodecliente.resources
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\Nota_facil.Frmcadastrodeestoque.resources
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\Nota_facil.Frmcadastrologin.resources
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\Nota_facil.Frmcaixa.resources
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\Nota_facil.Frmcliente.resources
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\Nota_facil.FrmEstoque.resources
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\Nota_facil.Frminicio.resources
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\Nota_facil.Frmlogin.resources
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\Nota_facil.Frmmenu.resources
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\Nota_facil.Properties.Resources.resources
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\Nota facil.csproj.GenerateResource.cache
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\Nota facil.csproj.CoreCompileInputs.cache
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\Nota facil.exe
+C:\git\suporte_informant\Nota facil\Nota facil\obj\Debug\Nota facil.pdb
